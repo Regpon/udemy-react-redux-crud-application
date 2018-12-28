@@ -30,8 +30,8 @@ class App extends Component {
             value: { props.value }
           </CardContent>
           <CardActions>
-            <Button onClick={props.increment}>+1</Button>
-            <Button onClick={props.decrement} variant="raised" color="primary">-1</Button>
+            <Button onClick={props.increment} variant="fab" color="primary">+1</Button>
+            <Button onClick={props.decrement} variant="fab" color="secondary">-1</Button>
           </CardActions>
         </Card>
       </React.Fragment>
