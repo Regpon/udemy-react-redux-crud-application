@@ -6,14 +6,14 @@ import { Provider } from 'react-redux';
 import './index.css';
 import reducer from './reducers';
 import App from './components/App';
-import NavigationBar from './components/NavigationBar';
 import * as serviceWorker from './serviceWorker';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={ store }>
-    <NavigationBar />
     <App />
   </Provider>, 
   document.getElementById('root')
