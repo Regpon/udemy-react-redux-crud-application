@@ -9,12 +9,12 @@ class ImageCard extends Component {
         <CardHeader
           title="Aflo Boma ye"
           subtitle="Aflo Ojisan"
-          avatar="images/aflo.png"
+          avatar={require("../images/aflo.png")}
         />
         <CardMedia
           overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
         >
-          <img src="images/aflo.png" alt="" />
+          <img src={require("../images/aflo.png")} alt="" />
         </CardMedia>
         <CardTitle title="Card title" subtitle="Card subtitle" />
         <CardText>
