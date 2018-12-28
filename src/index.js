@@ -7,15 +7,20 @@ import './index.css';
 import reducer from './reducers';
 import NavBar from './components/NavBar';
 import App from './components/App';
+import ImageCard from './components/ImageCard';
 import * as serviceWorker from './serviceWorker';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const store = createStore(reducer);
 
 ReactDOM.render(
-  <Provider store={ store }>
-    <NavBar />
-    <App />
-  </Provider>,
+  <MuiThemeProvider>
+    <Provider store={ store }>
+      <NavBar />
+      <ImageCard />
+      <App />
+    </Provider>
+  </MuiThemeProvider>,
   document.getElementById('root')
 );
 
