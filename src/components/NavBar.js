@@ -1,32 +1,20 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { AppBar, MenuItem, Drawer } from 'material-ui';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 class NavBar extends Component {
   render() {
     return (
-      <MuiThemeProvider>
-        <div>
-          <Drawer
-            docked={false}
-            width={200}
-            open={this.props.open}
-            onRequestChange={() => this.props.onToggle()}
-          >
-            <MenuItem>React</MenuItem>
-            <MenuItem>Redux</MenuItem>
-            <MenuItem>React Router</MenuItem>
-            <MenuItem>Material UI</MenuItem>
-            <MenuItem>Electron</MenuItem>
-          </Drawer>
-          <AppBar
-            title="React Study"
-            onLeftIconButtonTouchTap={ () => this.props.onToggle()}
-          />
-        </div>
-      </MuiThemeProvider>
-    );
-  }
+      <AppBar position="static" color="default">
+        <Toolbar>
+          <Typography variant="title" color="inherit">
+            NavBar
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    )
+  };
 }
 
 export default NavBar;

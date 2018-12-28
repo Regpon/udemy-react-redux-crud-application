@@ -5,17 +5,17 @@ import { Provider } from 'react-redux';
 
 import './index.css';
 import reducer from './reducers';
+import NavBar from './components/NavBar';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
 
 const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={ store }>
+    <NavBar />
     <App />
-  </Provider>, 
+  </Provider>,
   document.getElementById('root')
 );
 
