@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab'
 
 import { increment, decrement } from '../actions'
 
@@ -21,7 +21,6 @@ class App extends Component {
     const props = this.props;
 
     const classes = this.props.classes;
-    console.log(classes);
 
     return (
       <React.Fragment>
@@ -30,8 +29,8 @@ class App extends Component {
             value: { props.value }
           </CardContent>
           <CardActions>
-            <Button onClick={props.increment} variant="fab" color="primary">+1</Button>
-            <Button onClick={props.decrement} variant="fab" color="secondary">-1</Button>
+            <Fab onClick={props.increment} color="primary">+1</Fab>
+            <Fab onClick={props.decrement} color="secondary">-1</Fab>
           </CardActions>
         </Card>
       </React.Fragment>
