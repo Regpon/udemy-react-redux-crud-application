@@ -26,13 +26,13 @@ class App extends Component {
     return (
       <React.Fragment>
         <Card className={classes.card}>
-        <CardContent>
-        <div>value: { props.value }</div>
-        </CardContent>
-        <CardActions>
-        <Button onClick={props.increment}>+1</Button>
-        <Button onClick={props.decrement}>-1</Button>
-        </CardActions>
+          <CardContent>
+            value: { props.value }
+          </CardContent>
+          <CardActions>
+            <Button onClick={props.increment}>+1</Button>
+            <Button onClick={props.decrement}>-1</Button>
+          </CardActions>
         </Card>
       </React.Fragment>
     )
